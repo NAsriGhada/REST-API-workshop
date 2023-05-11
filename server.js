@@ -63,7 +63,7 @@ app.delete("/api/delete/:id", async (req, res) => {
   try {
     await user.findByIdAndDelete(req.params.id);
     console.log(req.params);
-    res.status(400).json({ message: "user is deleted" });
+    res.status(200).json({ message: "user is deleted" });
   } catch (err) {
     res.status(400).json({ err });
   }
